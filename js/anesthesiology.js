@@ -8,6 +8,8 @@ $(document).ready(function() {
     var procedureDuration = $("#procedure-duration").val();
     var bmi = $("#bmi").val();
 
+    result.text("A recommendation does not exist for this procedure. Please try a different selection.")
+
     if (surgicalExtent === "major") {
       result.text("GA + Neuraxial Blockade");
     }
