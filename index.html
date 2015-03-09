@@ -9,9 +9,26 @@
   <script type="text/javascript" src="js/anesthesiology.js"></script>
 </head>
 <body>
+  <div class="modal fade info">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <p>One fine body&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
   <form>
     <div class="form-group">
       <label for="surgical-extent">Surgical Extent</label>
+      <a href="#" data-toggle="modal" data-target=".info">More Info</a>
       <select id="surgical-extent" class="form-control">
         <option value="major">Major</option>
         <option value="moderate">Moderate</option>
@@ -28,6 +45,7 @@
     </div>
     <div class="form-group">
       <label for="surgical-position">Surgical Position</label>
+      <a href="#" data-toggle="modal" data-target=".info">More Info</a>
       <select id="surgical-position" class="form-control">
         <option value="supine">Supine</option>
         <option value="lateral">Lateral</option>
@@ -37,6 +55,7 @@
     </div>
     <div class="form-group">
       <label for="procedure-duration">Procedure Duration</label>
+      <a href="#" data-toggle="modal" data-target=".info">More Info</a>
       <select id="procedure-duration" class="form-control">
         <option value="less-than-3-hours">< 3 Hours</option>
         <option value="3-hours-or-longer">>= 3 Hours</option>
@@ -44,6 +63,7 @@
     </div>
     <div class="form-group">
       <label for="bmi">BMI</label>
+      <a href="#" data-toggle="modal" data-target=".info">More Info</a>
       <select id="bmi" class="form-control">
         <option value="below-40">< 40</option>
         <option value="40-or-above">>= 40</option>
