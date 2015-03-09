@@ -72,4 +72,19 @@ $(document).ready(function() {
       }
     }
   });
+
+  $("#surgical-position option[value='lateral']").hide();
+
+  $("#surgical-location").change(function() {
+    $("#surgical-position option").hide();
+    var surgicalLocation = $(this).val();
+    $("#surgical-position option[value='supine']").show();
+    $("#surgical-position option[value='prone']").show();
+    if (surgicalLocation === "lower-extremities") {
+      $("#surgical-position option[value='lateral']").show();
+    }
+    else if (surgicalLocation === "upper-extremities") {
+      $("#surgical-position option[value='beach-chair']").show();
+    }
+  });
 });
