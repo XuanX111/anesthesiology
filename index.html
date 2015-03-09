@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Anthesiology Decision Support</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <form>
+    <div class="form-group">
+      <label for="surgical-extent">Surgical Extent</label>
+      <select id="surgical-extent" class="form-control">
+        <option value="major">Major</option>
+        <option value="moderate">Moderate</option>
+        <option value="minor">Minor</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="surgical-location">Surgical Location</label>
+      <select id="surgical-location" class="form-control">
+        <option value="upper-extremities">Upper Extremities</option>
+        <option value="lower-extremities">Lower Extremities</option>
+        <option value="abdominal-or-spinal">Abdominal or Spinal</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="surgical-position">Surgical Position</label>
+      <select id="surgical-position" class="form-control">
+        <option value="supine">Supine</option>
+        <option value="lateral">Lateral</option>
+        <option value="prone">Prone</option>
+        <option value="beach-chair">Beach Chair</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="procedure-duration">Procedure Duration</label>
+      <select id="procedure-duration" class="form-control">
+        <option value="less-than-3-hours">< 3 Hours</option>
+        <option value="3-hours-or-longer">>= 3 Hours</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="bmi">BMI</label>
+      <select id="bmi" class="form-control">
+        <option value="below-40">< 40</option>
+        <option value="40-or-above">>= 40</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</body>
+</html>
