@@ -84,7 +84,7 @@ $(document).ready(function() {
     else {
       if (surgicalLocation === "upper-extremities") {
         if (surgicalPosition === "prone"
-          || surgicalPosition === "supine"
+          || surgicalPosition === "beach-chair"
           || procedureDuration === "3-hours-or-longer"
           || bmi === "40-or-above") {
           result.text("GA + PNB");
