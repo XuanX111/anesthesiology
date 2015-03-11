@@ -1,4 +1,67 @@
 $(document).ready(function() {
+  var surgeries = {
+    "hip-fracture": {
+      extent: "moderate",
+      location: "lower-extremities",
+      position: "supine"
+    },
+    "colon-resection": {
+      extent: "major",
+      location: "abdominal-or-spinal",
+      position: "supine"
+    },
+    "total-knee-replacement": {
+      extent: "moderate",
+      location: "lower-extremities",
+      position: "supine"
+    },
+    "carpal-tunnel-release": {
+      extent: "minor",
+      location: "upper-extremities",
+      position: "supine"
+    },
+    "shoulder-replacement": {
+      extent: "moderate",
+      location: "upper-extremities",
+      position: "beach-chair"
+    },
+    "two-level-laminectomy": {
+      extent: "moderate",
+      location: "abdominal-or-spinal",
+      position: "prone"
+    },
+    "aorto-bifemoral-graft": {
+      extent: "major",
+      location: "abdominal-or-spinal",
+      position: "supine"
+    },
+    "ankle-fusion": {
+      extent: "moderate",
+      location: "lower-extremities",
+      position: "supine"
+    },
+    "toe-amputation": {
+      extent: "minor",
+      location: "lower-extremities",
+      position: "supine"
+    },
+    "bone-spur-removal": {
+      extent: "minor",
+      location: "lower-extremities",
+      position: "supine"
+    },
+    "fixation-of-radial-bone": {
+      extent: "minor",
+      location: "upper-extremities",
+      position: "supine"
+    },
+    "hemorrhoidectomy": {
+      extent: "minor",
+      location: "abdominal-or-spinal",
+      position: "prone"
+    }
+  };
+
   $("#submit").click(function(event) {
     event.preventDefault();
     var result = $("#result");
@@ -7,6 +70,11 @@ $(document).ready(function() {
     var surgicalPosition = $("#surgical-position").val();
     var procedureDuration = $("#procedure-duration").val();
     var bmi = $("#bmi").val();
+
+    var surgery = $("#surgery").val();
+    surgicalExtent = surgeries[surgery].extent;
+    surgicalLocation = surgeries[surgery].location;
+    surgicalPosition = surgeries[surgery].position;
 
     result.text("A recommendation does not exist for this procedure. Please try a different selection.")
 
