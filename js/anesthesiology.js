@@ -61,6 +61,13 @@ $(document).ready(function() {
       position: "prone"
     }
   };
+  
+  $("#surgery").change(function() {
+    var surgery = $("#surgery").val();
+    $("#surgical-extent").val(surgeries[surgery].extent);
+    $("#surgical-location").val(surgeries[surgery].location);
+    $("#surgical-position").val(surgeries[surgery].position);
+  });
 
   $("#submit").click(function(event) {
     event.preventDefault();
@@ -70,11 +77,6 @@ $(document).ready(function() {
     var surgicalPosition = $("#surgical-position").val();
     var procedureDuration = $("#procedure-duration").val();
     var bmi = $("#bmi").val();
-
-    var surgery = $("#surgery").val();
-    surgicalExtent = surgeries[surgery].extent;
-    surgicalLocation = surgeries[surgery].location;
-    surgicalPosition = surgeries[surgery].position;
 
     result.text("A recommendation does not exist for this procedure. Please try a different selection.")
 
